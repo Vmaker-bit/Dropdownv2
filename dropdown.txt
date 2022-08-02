@@ -33,3 +33,17 @@ end)
 fsTab:Button(" Superhuman" ,function ()
      game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")
 end)
+
+--Misc
+local FbTab = library:Tab("miscellaneous")
+fsTab:Label("misc")
+
+FbTab:Button("TeleportWorld3" ,function()
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
+end)
+FbTab:Button("TeleportWorld1" ,function()
+      game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
+end)
+FbTab:Button("Random Bone" ,function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Buy",1,1)
+end)

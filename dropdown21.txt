@@ -1,20 +1,5 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/lolpoppyus/Roblox-Lua/master/Pop%20UI%20Lib", true))()
 local MainTab = library:Tab("BloxFruitScript")
-MainTab:AddLabel("Server Time")
-
-function UpdateTime()
-
-local GameTime = math.floor(workspace.DistributedGameTime+0.5)
-
-local Hour = math.floor(GameTime/(60^2))%24
-
-local Minute = math.floor(GameTime/(60^1))%60
-
-local Second = math.floor(GameTime/(60^0))%60
-
-Time:Set("Hr(s) : "..Hour.." Min(s) : "..Minute.." Sec(s) : "..Second)
-
-end
 
 --Button
 MainTab:Button("RipperHub", function()
@@ -60,4 +45,10 @@ FbTab:Button("TeleportWorld1" ,function()
 end)
 FbTab:Button("Random Bone" ,function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Buy",1,1)
+end)
+FbTab:Button("Buy Random Fruit" ,function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
+end)
+FbTab:Button("Store Fruit" ,function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit",v)
 end)

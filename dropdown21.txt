@@ -1,54 +1,29 @@
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/lolpoppyus/Roblox-Lua/master/Pop%20UI%20Lib", true))()
-local MainTab = library:Tab("BloxFruitScript")
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Kronos"))()
 
---Button
-MainTab:Button("RipperHub", function()
-   _G.Color = Color3.fromRGB(52, 190, 255)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/hajibeza/RIPPER-HUB/main/NEWBF.lua"))()
-end)
-MainTab:Button("Newhub" ,function()
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Xeter"))()
-end)
-MainTab:Button("ThunderZ" ,function()
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-05/HUB/main/Script"))()
-end)
+local window = library:Window({
+   Title = "KronosLib - By LeadMarker#1219",
+   Accent = Color3.fromRGB(69,69,207),
+   Logo = 3610245066,
+   ToggleKey = Enum.KeyCode.LeftAlt
+})
 
---BuyFs
-local fsTab = library:Tab("BuyFightingStyle")
-fsTab:Label("BuyFs")
+local tab = window:NewTab({
+   Logo = 4483345998
+})
 
-fsTab:Button("DeathStep " ,function ()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
-end)
-fsTab:Button("Dragon Talon " ,function ()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
-end)
-fsTab:Button("Sharkman Karate" ,function ()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")
-end)
-fsTab:Button(" e-Claw" ,function ()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")
-end)
-fsTab:Button(" Superhuman" ,function ()
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")
-end)
+local tabsection = tab:TabSection({
+   Title = "TabSection"
+})
 
---Misc
-local FbTab = library:Tab("miscellaneous")
-fsTab:Label("misc")
+local column = tabsection:AddColumn({
+   Title = "Column"
+})
 
-FbTab:Button("TeleportWorld3" ,function()
-    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
-end)
-FbTab:Button("TeleportWorld1" ,function()
-      game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
-end)
-FbTab:Button("Random Bone" ,function()
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Buy",1,1)
-end)
-FbTab:Button("Buy Random Fruit" ,function()
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
-end)
-FbTab:Button("Store Fruit" ,function()
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit",v)
-end)
+local section = column:Section({
+   Title = "Section"
+})
+
+section:Button({
+   Text = "Button",
+   Callback = function() end
+})

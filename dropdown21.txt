@@ -1,29 +1,17 @@
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Kronos"))()
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Moon'))() 
+local main = library:CreateWindow("MoonLIB", "#19cf83", 9160626035)
 
-local window = library:Window({
-   Title = "KronosLib - By LeadMarker#1219",
-   Accent = Color3.fromRGB(69,69,207),
-   Logo = 3610245066,
-   ToggleKey = Enum.KeyCode.LeftAlt
-})
+main:CreateTab("Home") 
+main:CreateTab("Tab")
 
-local tab = window:NewTab({
-   Logo = 4483345998
-})
+-- // home tab
+main:CreateLabel("Label", "Home")
 
-local tabsection = tab:TabSection({
-   Title = "TabSection"
-})
+main:CreateToggle("Toggle", "Home", function(togglestate)
+    print(togglestate)
+end)
 
-local column = tabsection:AddColumn({
-   Title = "Column"
-})
 
-local section = column:Section({
-   Title = "Section"
-})
-
-section:Button({
-   Text = "Button",
-   Callback = function() end
-})
+main:CreateButton("Button", "Home", function()
+print('btn')
+end)
